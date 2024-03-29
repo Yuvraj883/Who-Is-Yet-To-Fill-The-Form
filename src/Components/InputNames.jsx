@@ -35,7 +35,7 @@ function InputnamesList() {
     <div>
       {showEnterNamesList &&
         <div className='flex flex-col justify-center items-center p-4'>
-          <h1 className='font-bold text-lg'>Expected To Fill The Form</h1>
+          <h1 className='font-bold text-lg'>Students Who Are Expected To Fill The Form</h1>
           <textarea
             className='border-2 border-gray-200 w-full max-w-lg h-60 p-3 rounded-sm overflow-y-auto'
 
@@ -50,7 +50,7 @@ function InputnamesList() {
 
       {!showOutput && !showEnterNamesList &&
         <div className='flex flex-col justify-center items-center p-4'>
-          <h1 className='font-bold text-lg'>Has Filled The Form</h1>
+          <h1 className='font-bold text-lg'>Students Who Has Filled The Form</h1>
           <textarea
             className='border-2 border-gray-200 w-full max-w-lg h-60 p-3 rounded-sm overflow-y-auto'
 
