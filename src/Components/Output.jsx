@@ -16,7 +16,7 @@ const Output = (props) => {
 
   return (
     <>
-      <section className='flex flex-col items-center justify-center h-60   p-4 mt-8'>
+      <section className='flex flex-col items-center justify-center h-full '>
         {props.hasNotFilledList.length > 0 && (
           <div className='flex flex-col w-80 shadow-md p-4'>
             {!copied && (
@@ -32,7 +32,7 @@ const Output = (props) => {
 
             <ol>
               {props.hasNotFilledList.map((name) => (
-                <li>{name}</li>
+                <li key={name.id}>{name}</li>
               ))}
             </ol>
           </div>
