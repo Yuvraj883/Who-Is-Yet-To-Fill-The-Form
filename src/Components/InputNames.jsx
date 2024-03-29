@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import Output from './Output';
 
 function InputnamesList() {
-  const [inputValue1, setinputValue1] = useState(''); // Change state variable name
+  const [inputValue1, setinputValue1] = useState('');
   const [inputValue2, setinputValue2] = useState('');
-  const [hasFilledList, setHasFilledList] = useState('');
-  const [namesList, setNamesLilst] = useState([]);
+  const [namesList, setNamesList] = useState([]);
   const [showEnterNamesList, setShowEnterNamesList] = useState(true);
   const [showOutput, setShowOutput] = useState(false);
   const [hasNotFilledList, setHasNotFilledList] = useState([]);
 
-  const handleInputChange1 = (event) => { // Change function name
-    setinputValue1(event.target.value); // Update state variable
+  const handleInputChange1 = (event) => {
+    setinputValue1(event.target.value);
   };
 
   const handleInputChange2 = (event) => {
@@ -19,16 +18,15 @@ function InputnamesList() {
   };
 
   const handleSubmit = () => {
-    const newnamesList = inputValue1.split('\n').map(name => name.trim());
-    setNamesLilst(newnamesList);
+    const newNamesList = inputValue1.split('\n').map(name => name.trim().toLowerCase()); // Invoke toLowerCase
+    setNamesList(newNamesList);
     setinputValue1('');
     setShowEnterNamesList(false);
   };
 
   const handleSubmit2 = () => {
-    const newHasFilledList = inputValue2.split('\n').map(name => name.trim());
-    setHasFilledList(newHasFilledList);
-    const list = namesList.filter(name => !newHasFilledList.includes(name))
+    const newHasFilledList = inputValue2.split('\n').map(name => name.trim().toLowerCase()); // Invoke toLowerCase
+    const list = namesList.filter(name => !newHasFilledList.includes(name));
     setHasNotFilledList(list);
     setShowOutput(true);
   };

@@ -1,7 +1,7 @@
 const Output = (props)=>{
   return (
     <>
-    <section>
+    <section className="flex flex-col items-center justify-center">
       <ol>
         {
           props.hasNotFilledList.map((name)=>(
@@ -9,6 +9,10 @@ const Output = (props)=>{
           ))
         }
       </ol>
+      {
+        props.hasNotFilledList.length===0 &&
+        <div>Everyone has filled</div>
+      }
     </section>
 
     </>
