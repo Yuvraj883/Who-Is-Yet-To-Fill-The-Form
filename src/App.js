@@ -1,3 +1,5 @@
+
+import Footer from "./Components/Footer";
 import InputNames from "./Components/InputNames";
 import Navbar from "./Components/Navbar";
 
@@ -7,6 +9,7 @@ function App() {
     <>
     <Navbar/>
     <InputNames/>
+    <Footer/>
 
     </>
   );
